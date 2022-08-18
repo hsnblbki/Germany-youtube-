@@ -1,0 +1,7 @@
+.channel-page .follow button{
+    color: #fff !important;
+    background-color:red !important;
+}
+.video-section .card:hover{
+    transform: translateY(0%);
+}

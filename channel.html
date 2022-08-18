@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> kanalseite/mein Youtube </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/channel.css">
+</head>
+<body class="mt-5">
+  <div id="layer"></div>
+    <div id="top-menu">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-4 py-3">
+            <i class="fas fa-bars fa-lg me-3" id="toggler"></i>
+            <b>
+            <a class="navbar-brand" href="index.html"><span class="video-icon px-3"><i class="fas fa-play-circle"></i></span>
+              meinYouTube</a>
+            </b>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="index.html">Start</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="#">Entdecken</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="log.html">Verlauf</a>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button onclick="location.href='search.html';" class="btn btn-outline-danger" type="submit">Search</button>
+              </div>
+            </div>
+            <i class="fas fa-search ms-4 search-icon"></i>
+            <a class="nav-link login" href="#" data-bs-toggle="modal" data-bs-target="#modallogin">Anmelden</a>
+      </nav>
+      <input type="search" class="form-control search-input" placeholder="Suchen">
+
+      <!-- Modal -->
+      <div class="modal fade" id="modallogin">
+          <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Anmelden</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                        <label for="email" class="col-form-label">E-Mail:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="col-form-label">Passwort:</label>
+                          <input type="password" class="form-control" id="password">
+                      </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+              <a href="#">Passwort vergessen ?</a>
+              <a href="#" class="mx-auto">Konto erstellen</a>
+              <button type="button" class="btn btn-primary">weiter</button>
+              </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div id="wrap">
+          <div class="sidebar pb-0 pt-4">
+            <ul  class="list-group list-group-flush">
+              <a href="index.html" class="list-group-item list-group-item-action"><i class="fas fa-home me-2 red"></i>Start</a>
+              <a href="index.html" class="list-group-item list-group-item-action"><i class="fab fa-algolia me-2 red"></i></i>Empfohlene Videos</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-plus-square me-2 red"></i>zuerst Neueste</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-fire-alt me-2 red"></i>Angesagte Videos</a>
+              <a href="log.html" class="list-group-item list-group-item-action"><i class="fas fa-history me-2 red"></i>Verlauf</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-share-square me-2 red"></i>Abos</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-film me-2 red"></i>Filme & Serien</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-gamepad me-2 red"></i>Gaming</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-graduation-cap me-2 red"></i>Lehrinhalte</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-newspaper me-2 red"></i>Nachrichten</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-cog me-2 red"></i>Einstellungen</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-question-circle me-2 red"></i>Hilfe</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-comments me-2 red"></i>Feedback senden</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+
+    <div class="channel-page">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="banner position-relative pe-0">
+            <img src="img/media_12fa8cb62228835a68a2d107675896c3aa41fb5e4.jpg" class="img-fluid"  width="100%" alt="channel Foto">
+            <div class="social-media position-absolute bg-secondary p-1" style="bottom: 18px; left: 30px;">
+              <a href="#" title="DAZN Fußball International" class="me-2">
+                <img src="img/channel-img/unnamed.jpg" class="rounded-circle" width="20px"> DAZU
+              </a>
+              <a href="#" title="DAZU-facebook" class="me-2">
+                <img src="img/channel-img/facebook.png" >
+              </a>
+              <a href="#" title="DAZU-twitter">
+                <img src="img/channel-img/twitter.png">
+              </a>
+            </div>
+            <div class="follow position-absolute" style="bottom: 18px; right:40px;" >
+              <button class="btn btn-danger">Abonieren</button>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+          <nav class="navbar navbar-expand navbar-light bg-light pe-0">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Start</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Video</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Playlists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Communtiy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kanäle</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kanalinfo</a>
+                </li>
+              </ul>
+          </nav>
+      </div>
+      
+      <div class="video-section mx-auto">
+        <div class="row mx-4">
+          <div class="card border-0">
+            <div class="row ">
+              <div class="col-md-6 ps-0">
+                  <video controls poster="img/barca.jpg" autoplay muted width="100%">
+                    <source src="video/Memphis trifft! Barca wuselt sich zum Sieg_ Barcelona - Getafe 2_1 _ LaLiga _ DAZN Highlights.mp4" type="video/mp4">
+                    Your browser does not support the video tag
+                  </video>
+              </div>
+              <div class="col-md-6 px-0">
+                  <div class="card-block px-1 pt-1">
+                    <h4 class="card-title pt-2">Memphis trifft! Barca wuselt sich zum Sieg: Barcelona - Getafe 2:1</h4>
+                    <p class="card-text">Ein früher Treffer von Sergi Roberto markiert die 1:0 Führung in der 2. Spielminute.
+                       Der Ex-Barca-Spieler auf Seiten von Getafe macht in der 18. Minute den Ausgleich. Ehe Memphis in der 30. Minute zum 2:1 Siegtreffer trifft. 
+                      Barcelona holt 7 Punkte aus 3 Spielen in der Post-Messi-Ära.
+                    </p>
+                    <small class="text-muted">
+                      <i class="fas fa-film"></i><span> 1.687.295 Aufrufe</span>
+                      <i class="far fa-clock"></i><span> vor 10 Monaten</span>
+                    </small>
+                  </div>
+              </div>
+      
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="latest-dowload">
+    <div class="container">
+      <h5 class="py-5">letzte hochgeladene Videos</h5>
+      <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/messe.jpg" class="card-img-top" alt="...">
+                  <time>03:20</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Historisches Messi Debüt & Mbappé Doppelpack: Reims - PSG 0:2</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 1.000.803 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 1 Tag</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/maxresdefaultjb.jpg" class="card-img-top" alt="...">
+                  <time>04:30</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Starker Havertz - Chelsea entführt Punkt | FC Liverpool - FC Chelsea 1:1</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 577.491 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 1 Tag</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>
+                        DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/atlerko.jpg" class="card-img-top" alt="...">
+                  <time>05:00</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Slapstick-Eigentor rettet Meister den Punkt: Atletico Madrid - Villarreal</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 346.549 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 3 Monaten</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/ciroud.jpg" class="card-img-top" alt="...">
+                  <time>02:50</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Giroud mit Doppelpack & 60er Bizeps zum Sieg: AC Mailand - Cagliari 4:1</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 76.432 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 7 Monaten</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/madrid.jpg" class="card-img-top" alt="...">
+                  <time>06:34</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Ein Fall für Carvajal: Real Betis - Real Madrid 0:1</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 6.687.295 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 10 Monaten</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/juventos.jpg" class="card-img-top" alt="...">
+                  <time>04:10</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Leonardo Mancuso für Empoli Sieg: Juventus - Empoli 0:1</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 49.708 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 3 Wochen</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International </span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/mbaba.jpg" class="card-img-top" alt="...">
+                  <time>03:00</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Mbappe köpfelt ein! PSG bleibt ungeschlagen: Brest - PSG 2:4</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 257.202 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 6 Monaten</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International </span>
+                  </a>
+                </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html">
+                  <img src="img/bezema.jpg" class="card-img-top" alt="...">
+                  <time>06:20</time>
+                  <i class="fas fa-play fa-2x"></i>
+                  </a>
+                  </div>
+                  <a href="watch.html">
+                  <div class="card-body px-0">
+                    <p class="card-text">Königlicher Auftakt! Doppelter Benzema und Alaba-Debüt: Alaves - Real Madrid 1:4</p>
+                  </div>
+                  </a>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <span class="d-block"><i class="fas fa-film"></i><span> 513.302 Aufrufe</span></span>
+                      <i class="far fa-clock"></i><span> vor 4 Monaten</span>
+                    </small>
+                  </div>
+                  <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                </div>
+          </div>
+        </div>
+    </div>
+
+      
+
+    <script src="https://kit.fontawesome.com/ac35dd0b45.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

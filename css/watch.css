@@ -1,0 +1,55 @@
+.watch-page .card:hover{
+    transform:translateY(0%);
+}
+.card .text-video-section{
+    position:relative;
+}
+ .video-icons{
+    position:absolute;
+    bottom:15px;
+    left:10px;
+}
+.video-icons i:hover{
+    cursor:pointer;
+}
+.card .card-watch-text #more{
+    display:none;
+}
+.comments-details .form-control:focus{
+    box-shadow: none;
+}
+.card .card-inner{
+    display:none;
+}
+time{
+    font-size:13px;
+    left:15px
+}
+.card .card-inner .text-secondary{
+    font-size:15px;
+}
+@media(max-width:1030px){
+    .card #myBtn{
+        margin-bottom: 60px !important;
+    }
+}
+@media(min-width:992px) and (max-width:1440px){
+   .card .card-text2{
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+    img{
+        height:100%
+    }
+     }
+     @media(max-width:569px){
+        .card .card-inner .text-secondary{
+            font-size:11px !important;
+        }
+     }
+    @media(max-width:532px){
+        .card .row .text-secondary{
+            font-size:13px;
+        }
+    }

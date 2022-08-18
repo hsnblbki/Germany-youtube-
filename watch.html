@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch/mein Youtube</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/watch.css">
+</head>
+<body class="mt-5">
+  <div id="layer"></div>
+    <div id="top-menu">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-4 py-3">
+            <i class="fas fa-bars fa-lg me-3" id="toggler"></i>
+            <b>
+            <a class="navbar-brand" href="index.html"><span class="video-icon px-3"><i class="fas fa-play-circle"></i></span>
+              meinYouTube</a>
+            </b>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="index.html">Start</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="#">Entdecken</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="log.html">Verlauf</a>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button onclick="location.href='search.html';" class="btn btn-outline-danger" type="submit">Search</button>
+              </div>
+            </div>
+            <i class="fas fa-search ms-4 search-icon"></i>
+            <a class="nav-link login" href="#" data-bs-toggle="modal" data-bs-target="#modallogin">Anmelden</a>
+      </nav>
+      <input type="search" class="form-control search-input" placeholder="Suchen">
+
+      <!-- Modal -->
+      <div class="modal fade" id="modallogin">
+          <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Anmelden</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                        <label for="email" class="col-form-label">E-Mail:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="col-form-label">Passwort:</label>
+                          <input type="password" class="form-control" id="password">
+                      </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+              <a href="#">Passwort vergessen ?</a>
+              <a href="#" class="mx-auto">Konto erstellen</a>
+              <button type="button" class="btn btn-primary">weiter</button>
+              </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="row py-4">
+        <div id="wrap">
+          <div class="sidebar pb-0">
+            <ul  class="list-group list-group-flush">
+              <a href="index.html" class="list-group-item list-group-item-action"><i class="fas fa-home me-2 red"></i>Start</a>
+              <a href="index.html" class="list-group-item list-group-item-action"><i class="fab fa-algolia me-2 red"></i></i>Empfohlene Videos</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-plus-square me-2 red"></i>zuerst Neueste</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-fire-alt me-2 red"></i>Angesagte Videos</a>
+              <a href="log.html" class="list-group-item list-group-item-action"><i class="fas fa-history me-2 red"></i>Verlauf</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-share-square me-2 red"></i>Abos</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-film me-2 red"></i>Filme & Serien</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-gamepad me-2 red"></i>Gaming</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-graduation-cap me-2 red"></i>Lehrinhalte</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-newspaper me-2 red"></i>Nachrichten</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="fas fa-cog me-2 red"></i>Einstellungen</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-question-circle me-2 red"></i>Hilfe</a>
+              <a href="" class="list-group-item list-group-item-action"><i class="far fa-comments me-2 red"></i>Feedback senden</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+
+    <div class="watch-page pt-5">
+      <div class="container-fluid">
+  <div class="card border-0 mx-4">
+          <div class="row ">
+             <div class="col-lg-7 ps-0">
+                <video controls poster="img/barca.jpg" width="100%">
+                  <source src="video/Memphis trifft! Barca wuselt sich zum Sieg_ Barcelona - Getafe 2_1 _ LaLiga _ DAZN Highlights.mp4" type="video/mp4">
+                  Your browser does not support the video tag
+                </video>
+             </div>
+              <div class="col-lg-5 px-0 text-video-section">
+                <div class="card-block px-1 pt-1">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 1.687.295 Aufrufe</span>
+                    <i class="far fa-clock"></i><span> vor 10 Monaten</span>
+                    <a href="channel.html">
+                      <img src="img/channel-img/unnamed.jpg" class="rounded-circle my-2 ms-2" alt="channel-image" width="30px">
+                      <span>DAZN Fußball International</span>
+                  </a>
+                  </small>
+                  <h4 class="card-title pe-1">Memphis trifft! Barca wuselt sich zum Sieg: Barcelona - Getafe 2:1</h4>
+                  <p class="card-watch-text pe-2">Ein früher Treffer von Sergi Roberto markiert die 1:0 Führung in der 2. Spielminute.
+                     Der Ex-Barca-Spieler auf Seiten von Getafe macht in der 18. Minute <span id="dots">...</span> <span id="more">den Ausgleich. Ehe Memphis
+                      in der 30. Minute zum 2:1 Siegtreffer trifft. 
+                    Barcelona holt 7 Punkte aus 3 Spielen in der Post-Messi-Ära.</span>
+                  </p>
+                  <button class="btn mb-4" id="myBtn">Mehr Ansehen</button>
+                  <div class="video-icons">
+                    <i class="far fa-heart bg-secondary p-1 rounded-circle text-white me-1" title="mag ich"></i>
+                    <i class="far fa-clock bg-secondary p-1 rounded-circle text-white me-1" title="später ansehen"></i>
+                    <i class="far fa-share-square bg-secondary p-1 rounded-circle text-white me-1" title="teilen"></i>
+                    <i class="far fa-play-circle bg-secondary p-1 rounded-circle text-white me-1" title="in die Wiedergabeliste"></i>
+                    <span class="ms-3">Benachrichtigen</span>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>      
+
+          <div class="row mt-4">
+            <div class="col-lg-7 order-2 order-lg-1">
+              <div class="comments-details">
+              <span>kommentare</span>
+              <span class="dropdown">
+                <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  SORTIEREN NACH
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Datum</a></li>
+                  <li><a class="dropdown-item" href="#">Neueste zuerst</a></li>
+                </ul>
+              </span>
+              <div class="my-4">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Öffentlich kommentieren..."></textarea>
+                <button class="btn btn-danger my-3">Kommentieren</button>
+              </div>
+              </div>
+              <div class="public-comments mt-4">
+                <div class="card">
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-2">
+                              <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                              <p class="text-secondary text-center">vor 15 Minuten</p>
+                          </div>
+                          <div class="col-10">
+                              <p>
+                                  <a class="float-start mt-2" href="#"><strong>Joey</strong></a>
+                                  <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                  <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+            
+                             </p>
+                             <div class="clearfix"></div>
+                              <p> Memphis ist einfach Weltklasse</p>
+                              <p>
+                                  <a class="float-right btn btn-outline-primary ml-2 reply"> <i class="fa fa-reply"></i> Antwort</a>
+                                  <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                             </p>
+                          </div>
+                      </div>
+                        <div class="card card-inner ms-4">
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-2">
+                                          <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                                          <p class="text-secondary text-center">vor 20 Minuten</p>
+                                      </div>
+                                      <div class="col-10">
+                                          <p class="mt-2"><a href="#"><strong>Messi-the-goat</strong></a></p>
+                                          <p>Besser als Penaldo</p>
+                                          <p>
+                                              <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                                         </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+              </div>
+              <div class="card mt-5">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                            <p class="text-secondary text-center">vor 30 Minuten</p>
+                        </div>
+                        <div class="col-10">
+                            <p>
+                                <a class="float-start mt-2" href="#"><strong>BJKartal</strong></a>
+                                <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                                <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+          
+                           </p>
+                           <div class="clearfix"></div>
+                            <p> Memphis Depay ist jetzt schon ein erfolgreicher Transfer🔥</p>
+                            <p>
+                                <a class="float-right btn btn-outline-primary ml-2 reply"> <i class="fa fa-reply"></i> Antwort</a>
+                                <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                           </p>
+                        </div>
+                    </div>
+                      <div class="card card-inner ms-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                                        <p class="text-secondary text-center">vor 35 Minuten</p>
+                                    </div>
+                                    <div class="col-10">
+                                        <p class="mt-2"><a href="#"><strong>Mikro Meyer</strong></a></p>
+                                        <p>Besser als griezmann 😂</p>
+                                        <p>
+                                            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                                       </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="card my-5">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-2">
+                          <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                          <p class="text-secondary text-center">vor 40 Minuten</p>
+                      </div>
+                      <div class="col-10">
+                          <p>
+                              <a class="float-start mt-2" href="#"><strong>Leart</strong></a>
+                              <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                              <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                              <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                              <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+                              <span class="float-end"><i class="text-warning fa fa-star"></i></span>
+        
+                         </p>
+                         <div class="clearfix"></div>
+                          <p> Memphis ist so eine Maschine⚡️</p>
+                          <p>
+                              <a class="float-right btn btn-outline-primary ml-2 reply"> <i class="fa fa-reply"></i> Antwort</a>
+                              <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                         </p>
+                      </div>
+                  </div>
+                    <div class="card card-inner ms-4">
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col-2">
+                                      <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                                      <p class="text-secondary text-center">vor 45 Minuten</p>
+                                  </div>
+                                  <div class="col-10">
+                                      <p class="mt-2"><a href="#"><strong>Kzzz</strong></a></p>
+                                      <p>Trotzdem ist Barcelona schlecht</p>
+                                      <p>
+                                          <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> gefällt mir</a>
+                                     </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+          </div>
+              </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2">
+              <p>Vorschläge</p>
+              <div class="card p-2 mb-4">
+                <div class="row ">
+                  <div class="col-sm-5 card-icons">
+                    <a href="watch.html">
+                    <img src="img/ciroud.jpg" width="100%">
+                    <time>04:20</time>
+                    <i class="fas fa-play fa-2x"></i>
+                    </a>
+                  </div>
+                  <div class="col-sm-7">
+                      <div class="card-block px-1 pt-1">
+                        <p class="card-text2 mb-2">Giroud mit Doppelpack & 60er Bizeps zum Sieg: AC Mailand - Cagliari 4:1</p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i><span> 1.687.295 Aufrufe</span>
+                          <a href="channel.html" class="d-sm-block ms-sm-0 ms-1">
+                            <img src="img/channel-img/unnamed.jpg" class="rounded-circle mt-1 h-100" alt="channel-image" width="30px">
+                            <span>DAZN Fußball International</span>
+                        </a>
+                        </small>
+                      </div>
+                  </div>
+          
+                  </div>
+                </div>
+                <div class="card p-2 mb-4">
+                  <div class="row ">
+                    <div class="col-sm-5 card-icons">
+                      <a href="watch.html">
+                      <img src="img/was verdient.jpg" width="100%">
+                      <time>05:40</time>
+                      <i class="fas fa-play fa-2x"></i>
+                      </a>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="card-block px-1 pt-1">
+                          <p class="card-text2 mb-2">Goldgrube IT-Branche? Das verdient ein angestellter IT-Consultant</p>
+                          <small class="text-muted">
+                            <i class="fas fa-film"></i><span> 346.549 Aufrufe</span>
+                            <a href="channel.html" class="d-sm-block ms-sm-0 ms-1">
+                              <img src="img/channel-img/lohnt das.jpg" class="rounded-circle mt-1" alt="channel-image" width="30px">
+                              <span>Lohnt sich das?</span>
+                          </a>
+                          </small>
+                        </div>
+                    </div>
+            
+                    </div>
+                  </div>
+                  <div class="card p-2 mb-4">
+                    <div class="row ">
+                      <div class="col-sm-5 card-icons">
+                        <a href="watch.html">
+                        <img src="img/maxresdefaultjb.jpg" width="100%">
+                        <time>06:54</time>
+                        <i class="fas fa-play fa-2x"></i>
+                        </a>
+                      </div>
+                      <div class="col-sm-7">
+                          <div class="card-block px-1 pt-1">
+                            <p class="card-text2 mb-2">Starker Havertz - Chelsea entführt Punkt | FC Liverpool - FC Chelsea 1:1</p>
+                            <small class="text-muted">
+                              <i class="fas fa-film"></i><span> 543.234 Aufrufe</span>
+                              <a href="channel.html" class="d-sm-block ms-sm-0 ms-1">
+                                <img src="img/channel-img/sky.jpg" class="rounded-circle mt-1" alt="channel-image" width="30px">
+                                <span>Sky Sport HD</span>
+                            </a>
+                            </small>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="card p-2 mb-4">
+                      <div class="row ">
+                        <div class="col-sm-5 card-icons">
+                          <a href="watch.html">
+                          <img src="img/stev jobs.jpg" width="100%">
+                          <time>03:00</time>
+                          <i class="fas fa-play fa-2x"></i>
+                          </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-block px-1 pt-1">
+                              <p class="card-text2 mb-2">One of the Greatest Speeches Ever | Steve Jobs</p>
+                              <small class="text-muted">
+                                <i class="fas fa-film"></i><span> 6.687.295 Aufrufe</span>
+                                <a href="channel.html" class="d-sm-block ms-sm-0 ms-1">
+                                  <img src="img/channel-img/ark.jpg" class="rounded-circle mt-1" alt="channel-image" width="30px">
+                                  <span>Motivation Ark</span>
+                              </a>
+                              </small>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/ac35dd0b45.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/watch.js"></script>
+</body>
+</html>

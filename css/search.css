@@ -1,0 +1,28 @@
+.search-header .search-filter-icon{
+    cursor:pointer;
+}
+.search-column{
+    display:none;
+}
+input:checked+span{
+    color:red;
+}
+.card .card-horizontal .card-body p{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.card-body{
+    min-width:0;
+ }
+@media(max-width:991px){
+.card .card-horizontal .card-icons .card-img{
+    width:100% !important;
+}
+ }
+ @media(min-width:992px) and (max-width:1199px){
+    .card .card-horizontal .card-body .channel-icon{
+        display:block !important;
+        margin-left: 0 !important;
+    }
+ }
